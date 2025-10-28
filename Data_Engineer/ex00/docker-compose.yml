@@ -1,0 +1,36 @@
+services:
+  postgres:
+    image: postgres:17
+    container_name: postgres_piscineds
+    restart: always
+    environment:
+      POSTGRES_USER: claprand
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: piscineds
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+
+volumes:
+  pgdata:
+# psql -U claprand  -d piscineds -h localhost -W
+
+# \l : affiche toutes les bases disponibles
+# \c piscineds : se connecter explicitement à piscineds
+# \dt : Voir les tables dans la base actuelle
+
+# CREATE TABLE users (
+#   id SERIAL PRIMARY KEY,
+#   name VARCHAR(100),
+#   age INT
+# );
+# -> Créer une table de test
+
+# INSERT INTO users (name, age)
+# VALUES ('Alice', 25),
+#        ('Bob', 30);
+# -> Inserer des donnees
+
+# SELECT * FROM users;
+# -> lire les donnees
