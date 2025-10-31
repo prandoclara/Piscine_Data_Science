@@ -55,3 +55,9 @@ Same logic as ex02, but generalized.
 
 Create items table from items.csv
 (using at least three SQL data types).
+
+## 🧠 Notes
+
+Running COPY inside PostgreSQL is ~10× faster.
+Docker setup ensures consistency and easy cleanup.
+ex02 = manual, ex03 = automated.
